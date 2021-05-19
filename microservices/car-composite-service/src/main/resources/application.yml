@@ -1,0 +1,35 @@
+server.port: 7010
+server:
+  error:
+    include-message: always
+
+logging:
+  level:
+    root: INFO
+    com.kenny: DEBUG
+
+app:
+  carmodel-service:
+    host: localhost
+    port: 7011
+  customer-service:
+    host: localhost
+    port: 7012
+  buildprice-service:
+    host: localhost
+    port: 7013
+
+---
+spring.profiles: docker
+server.port: 8080
+
+app:
+  carmodel-service:
+    host: carmodel
+    port: 8080
+  buildprice-service:
+    host: buildprice
+    port: 8080
+  customer-service:
+    host: customer
+    port: 8080

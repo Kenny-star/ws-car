@@ -1,0 +1,7 @@
+include ':microservices:buildprice-service'
+include ':microservices:customer-service'
+include ':microservices:car-composite-service'
+include ':microservices:carmodel-service'
+include 'api'
+include 'Utils'
+
